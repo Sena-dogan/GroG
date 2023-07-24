@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "77433905305",
+    "project_id": "grog-app",
+    "storage_bucket": "grog-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77433905305:android:fe3605474a07709fbd1808",
+        "android_client_info": {
+          "package_name": "boo.bbee.grog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhhs8WZhPZAmWbN93EXujM2tYkimrxR60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "77433905305-36m8bi27rngnqjcs5e6kar31hlc1p3kq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.tinywall.remembercar"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77433905305:android:1d3f629b1f6a3a37bd1808",
+        "android_client_info": {
+          "package_name": "boo.bee.grog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhhs8WZhPZAmWbN93EXujM2tYkimrxR60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "77433905305-36m8bi27rngnqjcs5e6kar31hlc1p3kq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.tinywall.remembercar"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77433905305:android:1ae4c821e45b0828bd1808",
+        "android_client_info": {
+          "package_name": "dev.feichtinger.flutter_production_boilerplate_riverpod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhhs8WZhPZAmWbN93EXujM2tYkimrxR60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77433905305-dj547rsupfdvcq3cprq07jkvk0bpg5fg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "77433905305-36m8bi27rngnqjcs5e6kar31hlc1p3kq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.tinywall.remembercar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

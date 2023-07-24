@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.feichtinger.flutter_production_boilerplate_riverpod">
+    package="boo.bee.grog">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
