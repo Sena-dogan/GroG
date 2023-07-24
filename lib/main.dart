@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,11 +18,14 @@ void main() async {
   /// Initialize packages
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  if (Platform.isAndroid) {
-    await FlutterDisplayMode.setHighRefreshRate();
+  final Directory tmpDir;
+  if (!kIsWeb) {
+    if (Platform.isAndroid) {
+      await FlutterDisplayMode.setHighRefreshRate();
+    }
+    tmpDir = await getTemporaryDirectory();
+    await Hive.initFlutter(tmpDir.toString());
   }
-  final Directory tmpDir = await getTemporaryDirectory();
-  await Hive.initFlutter(tmpDir.toString());
   await Hive.openBox('prefs');
 
   runApp(
