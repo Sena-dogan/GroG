@@ -65,3 +65,11 @@ class MyApp extends ConsumerWidget {
     );
   }
 }
+
+/*
+Platform  Firebase App Id
+web       1:77433905305:web:cb915313c3cc2069bd1808
+android   1:77433905305:android:1d3f629b1f6a3a37bd1808
+ios       1:77433905305:ios:102ecfd91cace2f2bd1808
+macos     1:77433905305:ios:bfe59e46f22abf32bd1808
+*/
