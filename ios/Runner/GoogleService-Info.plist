@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>77433905305-ig0a5e897qj6bg535rhmb4j359tnlfaq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.77433905305-ig0a5e897qj6bg535rhmb4j359tnlfaq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCr7FMIrQO5Q1fzY9Yn-wSJC0Sq-5xVlVY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>77433905305</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>boo.bbee.grog</string>
+	<key>PROJECT_ID</key>
+	<string>grog-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>grog-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:77433905305:ios:102ecfd91cace2f2bd1808</string>
+</dict>
+</plist>
