@@ -97,6 +97,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      sha256: "2e9324f719e90200dc7d3c4f5d2abc26052f9f2b995d3b6626c47a0dfe1c8192"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.15.0"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      sha256: b63e3be6c96ef5c33bdec1aab23c91eb00696f6452f0519401d640938c94cba2
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.8.0"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      sha256: "0fd5c4b228de29b55fac38aed0d9e42514b3d3bd47675de52bf7f8fccaf922fa"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -106,10 +130,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_displaymode
-      sha256: "136b0314fdc78fe995b0b75061fe9ff8210dffca84f8f8110f8f71029479db3b"
+      sha256: "42c5e9abd13d28ed74f701b60529d7f8416947e58256e6659c5550db719c57ef"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.6.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -370,6 +394,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  slide_switcher:
+    dependency: "direct main"
+    description:
+      name: slide_switcher
+      sha256: "5fda4741919814b33971d12392f24edc92c5b39b8656367b38a19d4c578be4f4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
   source_span:
     dependency: transitive
     description:
@@ -523,5 +555,5 @@ packages:
     source: hosted
     version: "0.2.0+3"
 sdks:
-  dart: ">=3.0.0-0 <4.0.0"
-  flutter: ">=3.0.0"
+  dart: ">=3.0.5 <4.0.0"
+  flutter: ">=3.3.0"

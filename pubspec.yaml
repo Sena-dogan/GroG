@@ -38,6 +38,8 @@ dependencies:
   hive_flutter: ^1.1.0
   url_launcher: ^6.1.7
   ionicons: ^0.2.2
+  firebase_core: ^2.15.0
+  slide_switcher: ^1.1.2
 
 dev_dependencies:
   flutter_test:
