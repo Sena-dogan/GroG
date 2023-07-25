@@ -10,7 +10,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'config/theme.dart';
 import 'states/theme_mode_state.dart';
-import 'ui/screens/skeleton_screen.dart';
+import 'ui/features/skeleton_screen.dart';
 
 /// Try using const constructors as much as possible!
 
