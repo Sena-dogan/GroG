@@ -66,12 +66,9 @@ dependencies:
   url_launcher: ^6.1.11
   intl: ^0.18.0
   flutter_html: ^3.0.0-beta.2
-  flutter_material_color_picker: ^1.2.0
-  number_inc_dec: ^0.8.0
-  flutter_spinbox: ^0.13.1
   swipeable_tile: ^2.0.0+3
   flutter_swipe_action_cell: ^3.1.2
-  chips_choice: ^3.0.0
+  stack_trace: ^1.11.0
 
 
 dev_dependencies:
@@ -103,7 +100,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: false
+  uses-material-design: true
 
   assets:
     - assets/translations/

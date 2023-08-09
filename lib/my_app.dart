@@ -1,7 +1,9 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'config/theme.dart';
+import 'config/router/app_router.dart';
+import 'di/components/service_locator.dart';
 import 'states/theme_mode_state.dart';
 
 class MyApp extends ConsumerWidget {
@@ -9,17 +11,24 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeModeState currentTheme = ref.watch(themeProvider);
+    final ThemeModeState? currentTheme = ref.watch(themeProvider);
 
     return MaterialApp.router(
-      //routerConfig: getIt<SGGoRouter>().getGoRouter,
+      routerConfig: getIt<SGGoRouter>().getGoRouter,
+
       /// Localization is not available for the title.
       title: 'Flutter Production Boilerplate',
 
       /// Theme stuff
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: currentTheme.themeMode,
+      theme: FlexThemeData.light(
+        scheme: FlexScheme.hippieBlue,
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+      ),
+      darkTheme: FlexThemeData.dark(
+        scheme: FlexScheme.hippieBlue,
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+      ),
+      themeMode: currentTheme?.themeMode ?? ThemeMode.system,
       debugShowCheckedModeBanner: false,
     );
   }

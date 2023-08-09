@@ -25,14 +25,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.2"
-  animated_checkmark:
-    dependency: transitive
-    description:
-      name: animated_checkmark
-      sha256: "878db0c6754c4145e9e17b46f20e304da060ac7a65f8ab4ab43494093f3f8443"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   args:
     dependency: transitive
     description:
@@ -145,14 +137,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  chips_choice:
-    dependency: "direct main"
-    description:
-      name: chips_choice
-      sha256: "593a9bf48238abb057f81b1bc33557f28588126d3bd8b9deae3123cc697aa1bf"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   ci:
     dependency: transitive
     description:
@@ -385,14 +369,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
-  flexi_chip:
-    dependency: transitive
-    description:
-      name: flexi_chip
-      sha256: "5942219bdbd94a7527b69eb5640e6bd05d8ec6a41a5a4a1a10ca22a5a1f41beb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.8"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -435,14 +411,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_material_color_picker:
-    dependency: "direct main"
-    description:
-      name: flutter_material_color_picker
-      sha256: ca1e7749d228c9155ea24bce98e647cdbffa350e6f334f6c001f841cd3d9c987
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0"
   flutter_riverpod:
     dependency: "direct main"
     description:
@@ -451,14 +419,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.6"
-  flutter_spinbox:
-    dependency: "direct main"
-    description:
-      name: flutter_spinbox
-      sha256: "38d8c1a3a39f0fa72823d4470785f5e165f2deb53531ca7803b54ba45e4dbd46"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.13.1"
   flutter_swipe_action_cell:
     dependency: "direct main"
     description:
@@ -797,14 +757,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.0"
-  number_inc_dec:
-    dependency: "direct main"
-    description:
-      name: number_inc_dec
-      sha256: af0a35f923a2e67532bc6579e8fbf0093be8ea185e48bb543db4e3e355017ec5
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.8.0"
   package_config:
     dependency: transitive
     description:
@@ -1131,7 +1083,7 @@ packages:
     source: hosted
     version: "1.9.1"
   stack_trace:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: stack_trace
       sha256: c3c7d8edb15bee7f0f74debd4b9c5f3c2ea86766fe4178eb2a18eb30a0bdaed5
@@ -1322,14 +1274,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
-  widget_event:
-    dependency: transitive
-    description:
-      name: widget_event
-      sha256: b71014bc7d8ec85a325357e76e6b5769ee1d8a67d099a6ce5c429440a19dbf18
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.5"
   win32:
     dependency: transitive
     description:

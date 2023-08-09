@@ -32,4 +32,12 @@ class ThemeModeState extends ChangeNotifier {
     Hive.box('prefs').put('themeMode', themeMode.toString());
     notifyListeners();
   }
+
+  void toggleTheme() {
+    if (themeMode == ThemeMode.dark) {
+      setThemeMode(ThemeMode.light);
+    } else {
+      setThemeMode(ThemeMode.dark);
+    }
+  }
 }

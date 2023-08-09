@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
 import 'data/hive/hive.dart';
 import 'data/hive/hive_helper.dart';
@@ -32,4 +33,9 @@ void main() async {
       child: MyApp(),
     ),
   );
+  FlutterError.demangleStackTrace = (StackTrace stack) {
+    if (stack is stack_trace.Trace) return stack.vmTrace;
+    if (stack is stack_trace.Chain) return stack.toTrace().vmTrace;
+    return stack;
+  };
 }
