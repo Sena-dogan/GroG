@@ -2,16 +2,18 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'config/router/app_router.dart';
 import 'di/components/service_locator.dart';
-import 'states/theme_mode_state.dart';
+import 'states/theme_logic.dart';
+import 'states/theme_ui_model.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeModeState? currentTheme = ref.watch(themeProvider);
+    final ThemeUiModel currentTheme = ref.watch(themeLogicProvider);
 
     return MaterialApp.router(
       routerConfig: getIt<SGGoRouter>().getGoRouter,
@@ -28,7 +30,7 @@ class MyApp extends ConsumerWidget {
         scheme: FlexScheme.hippieBlue,
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
       ),
-      themeMode: currentTheme?.themeMode ?? ThemeMode.system,
+      themeMode: currentTheme.themeMode,
       debugShowCheckedModeBanner: false,
     );
   }

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../config/router/app_router.dart';
-import '../../states/theme_mode_state.dart';
+import '../../states/theme_logic.dart';
 
 class SecondScreen extends ConsumerWidget {
   const SecondScreen({super.key});
@@ -20,7 +20,7 @@ class SecondScreen extends ConsumerWidget {
           child: const Text('First Screen'),
         ),
         ElevatedButton(
-          onPressed: () => ref.read(themeProvider.notifier).toggleTheme(),
+          onPressed: () => ref.read(themeLogicProvider.notifier).toggleTheme(),
           child: const Text('Change Theme'),
         ),
       ],

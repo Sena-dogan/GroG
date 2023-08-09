@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final AutoDisposeChangeNotifierProvider<ThemeModeState> themeProvider =
-    ChangeNotifierProvider.autoDispose(
-        (AutoDisposeChangeNotifierProviderRef<ThemeModeState> ref) {
-  return ThemeModeState();
-});
+import 'theme_ui_model.dart';
 
-class ThemeModeState extends ChangeNotifier {
-  ThemeModeState() {
+part 'theme_logic.g.dart';
+
+@riverpod
+class ThemeLogic extends _$ThemeLogic {
+  @override
+  ThemeUiModel build() {
+    ThemeMode themeMode = ThemeMode.system;
     final String mode = Hive.box('prefs')
         .get('themeMode', defaultValue: ThemeMode.system.toString()) as String;
     switch (mode) {
@@ -23,18 +24,16 @@ class ThemeModeState extends ChangeNotifier {
         themeMode = ThemeMode.system;
         break;
     }
+    return ThemeUiModel(themeMode: themeMode);
   }
 
-  ThemeMode? themeMode;
-
   void setThemeMode(ThemeMode mode) {
-    themeMode = mode;
-    Hive.box('prefs').put('themeMode', themeMode.toString());
-    notifyListeners();
+    Hive.box('prefs').put('themeMode', mode.toString());
+    state = state.copyWith(themeMode: mode);
   }
 
   void toggleTheme() {
-    if (themeMode == ThemeMode.dark) {
+    if (state.themeMode == ThemeMode.dark) {
       setThemeMode(ThemeMode.light);
     } else {
       setThemeMode(ThemeMode.dark);
