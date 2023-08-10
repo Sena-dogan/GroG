@@ -17,7 +17,7 @@
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>de</string>
+		<string>tr</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>flutter_production_boilerplate_riverpod</string>

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
+import 'constants/strings.dart';
 import 'data/hive/hive.dart';
 import 'data/hive/hive_helper.dart';
 import 'di/components/service_locator.dart';
@@ -17,6 +19,7 @@ import 'my_app.dart';
 void main() async {
   /// Initialize packages
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await GetStorage.init();
   await initHive();
   await configureDependencies();
@@ -29,8 +32,16 @@ void main() async {
   }
 
   runApp(
-    const ProviderScope(
-      child: MyApp(),
+    EasyLocalization(
+      supportedLocales: const <Locale>[
+        Locale('en'),
+        Locale('tr'),
+      ],
+      path: Strings.localizationsPath,
+      fallbackLocale: const Locale('en', ''),
+      child: const ProviderScope(
+        child: MyApp(),
+      ),
     ),
   );
   FlutterError.demangleStackTrace = (StackTrace stack) {

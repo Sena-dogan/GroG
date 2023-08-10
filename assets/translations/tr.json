@@ -1,0 +1,8 @@
+{
+  "app_name": "Flutter Production Boilerplate",
+
+  "bottom_nav_first": "Ana Sayfa",
+  "bottom_nav_second": "Hakkında",
+  "toggle_language": "Dili Değiştir",
+  "toggle_theme": "Temayı Değiştir"
+}

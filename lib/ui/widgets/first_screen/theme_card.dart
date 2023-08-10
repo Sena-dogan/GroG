@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../states/theme_logic.dart';
-import '../../../states/theme_ui_model.dart';
+
+import '../../../config/theme/theme_logic.dart';
+import '../../../config/theme/theme_ui_model.dart';
 
 class ThemeCard extends ConsumerWidget {
   const ThemeCard({

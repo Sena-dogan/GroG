@@ -6,7 +6,7 @@ part of 'theme_logic.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$themeLogicHash() => r'5eeba7b1f6d1bd875d3176f03a8b1c84f007e35b';
+String _$themeLogicHash() => r'c8cd24aa26927d483e43b95be091bd6332d6b647';
 
 /// See also [ThemeLogic].
 @ProviderFor(ThemeLogic)

@@ -1,12 +1,12 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'config/router/app_router.dart';
+import 'config/theme/theme_logic.dart';
+import 'config/theme/theme_ui_model.dart';
 import 'di/components/service_locator.dart';
-import 'states/theme_logic.dart';
-import 'states/theme_ui_model.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
@@ -14,7 +14,6 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ThemeUiModel currentTheme = ref.watch(themeLogicProvider);
-
     return MaterialApp.router(
       routerConfig: getIt<SGGoRouter>().getGoRouter,
 
@@ -32,12 +31,15 @@ class MyApp extends ConsumerWidget {
       ),
       themeMode: currentTheme.themeMode,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
 
 Future<void> setPreferredOrientations() {
-  return SystemChrome.setPreferredOrientations([
+  return SystemChrome.setPreferredOrientations(<DeviceOrientation>[
     DeviceOrientation.portraitUp,
   ]);
 }

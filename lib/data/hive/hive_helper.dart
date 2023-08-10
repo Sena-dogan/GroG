@@ -14,7 +14,7 @@ class HiveHelper {
   }
 
   Future<void> saveUser(UserModel user) async {
-    final Box box = await Hive.openBox(userBox);
+    final Box<dynamic> box = await Hive.openBox(userBox);
     box.put(userBox, user);
   }
 

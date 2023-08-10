@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -13,12 +14,12 @@ class FirstScreen extends ConsumerWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Center(child: Text('First Screen')),
+          Center(child: const Text('bottom_nav_first').tr()),
           ElevatedButton(
             onPressed: () {
               context.go(SGRoute.secondScreen.route);
             },
-            child: const Text('Second Screen'),
+            child: const Text('bottom_nav_second').tr(),
           ),
         ],
       ),
