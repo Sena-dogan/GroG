@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../states/theme_mode_state.dart';
+import '../../../config/theme/theme_logic.dart';
+import '../../../config/theme/theme_ui_model.dart';
 
 class ThemeCard extends ConsumerWidget {
   const ThemeCard({
@@ -15,7 +16,7 @@ class ThemeCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeModeState state = ref.watch(themeProvider);
+    final ThemeUiModel state = ref.watch(themeLogicProvider);
 
     return Card(
       elevation: 2,
@@ -26,7 +27,7 @@ class ThemeCard extends ConsumerWidget {
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12))),
       child: InkWell(
-        onTap: () => ref.watch(themeProvider.notifier).setThemeMode(mode),
+        onTap: () => ref.watch(themeLogicProvider.notifier).setThemeMode(mode),
         borderRadius: const BorderRadius.all(Radius.circular(12)),
         child: Icon(
           icon,
