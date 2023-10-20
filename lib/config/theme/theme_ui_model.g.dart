@@ -17,7 +17,7 @@ Map<String, dynamic> _$$_ThemeUiModelToJson(_$_ThemeUiModel instance) =>
       'themeMode': _$ThemeModeEnumMap[instance.themeMode]!,
     };
 
-const _$ThemeModeEnumMap = {
+const Map<ThemeMode, String> _$ThemeModeEnumMap = {
   ThemeMode.system: 'system',
   ThemeMode.light: 'light',
   ThemeMode.dark: 'dark',

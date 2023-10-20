@@ -69,6 +69,7 @@ dependencies:
   swipeable_tile: ^2.0.0+3
   flutter_swipe_action_cell: ^3.1.2
   stack_trace: ^1.11.0
+  flutter_native_splash: ^2.3.4
 
 
 dev_dependencies:
@@ -104,6 +105,7 @@ flutter:
 
   assets:
     - assets/translations/
+    - assets/images/
 
   fonts:
     - family: Nunito

@@ -13,7 +13,7 @@ class FirstScreen extends ConsumerWidget {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: <Widget>[
           Center(child: const Text('bottom_nav_first').tr()),
           ElevatedButton(
             onPressed: () {
