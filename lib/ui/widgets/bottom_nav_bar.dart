@@ -1,49 +1,82 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ionicons/ionicons.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../states/widgets/bottom_nav_bar/bottom_nav_bar_state.dart';
+import '../../logic/nav_bar_logic.dart';
+import '../../models/nav_bar_ui_model.dart';
+import '../utils/context_extensions.dart';
 
-class BottomNavBar extends ConsumerWidget {
-  const BottomNavBar({super.key});
+class NavBar extends ConsumerWidget {
+  const NavBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final int? navIndex = ref.watch(bottomNavProvider) as int?;
-
-    return Card(
-      margin: const EdgeInsets.only(top: 1, right: 4, left: 4),
-      elevation: 4,
-      shadowColor: Theme.of(context).colorScheme.shadow,
-      color: Theme.of(context).colorScheme.surfaceVariant,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(16),
-          topRight: Radius.circular(16),
+    final BottomNavBarUiModel nav = ref.watch(bottomNavBarLogicProvider);
+    return BottomNavigationBar(
+      currentIndex: nav.navIndex,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
+      selectedItemColor: context.theme.primaryColor,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      type: BottomNavigationBarType.fixed,
+      selectedIconTheme: IconThemeData(
+        size: 25,
+        color: context.theme.iconTheme.color,
+      ),
+      unselectedIconTheme: IconThemeData(
+        size: 25,
+        color: context.theme.iconTheme.color?.withOpacity(0.7),
+      ),
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.format_quote_rounded,
+            size: 30,
+          ),
+          label: 'Home',
         ),
-      ),
-      child: BottomNavigationBar(
-        currentIndex: navIndex ?? 0,
-        onTap: (int index) {
-          ref.read(bottomNavProvider.notifier).setAndPersistValue(index);
-        },
-        type: BottomNavigationBarType.fixed,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        selectedItemColor: Theme.of(context).colorScheme.primary,
-        unselectedItemColor: Theme.of(context).textTheme.bodySmall!.color,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: const Icon(Ionicons.home_outline),
-            label: tr('bottom_nav_first'),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite_rounded),
+          label: 'Likes',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.grid_view_rounded,
+            size: 30,
           ),
-          BottomNavigationBarItem(
-            icon: const Icon(Ionicons.information_circle_outline),
-            label: tr('bottom_nav_second'),
-          ),
-        ],
-      ),
+          label: 'Wallpaper',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_rounded),
+          label: 'Profile',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings_rounded),
+          label: 'Settings',
+        )
+      ],
+      onTap: (int index) {
+        ref.read(bottomNavBarLogicProvider.notifier).setNavIndex(index);
+        switch (index) {
+          case 0:
+            context.go('/home');
+            break;
+          case 1:
+            context.go('/likes');
+            break;
+          case 2:
+            context.go('/login');
+            break;
+          case 3:
+            context.go('/profile_home');
+            break;
+          case 4:
+            context.go('/settings');
+            break;
+          default:
+            context.go('/home');
+        }
+      },
     );
   }
 }
