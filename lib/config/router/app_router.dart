@@ -6,8 +6,11 @@ import 'package:injectable/injectable.dart';
 
 import '../../data/getstore/get_store_helper.dart';
 import '../../di/components/service_locator.dart';
+import '../../ui/auth/login_page.dart';
+import '../../ui/error/not_found_page.dart';
 import '../../ui/features/first_screen.dart';
 import '../../ui/features/second_screen.dart';
+import 'fade_extension.dart';
 
 GetStoreHelper getStoreHelper = getIt<GetStoreHelper>();
 
@@ -15,12 +18,7 @@ enum SGRoute {
   home,
   firstScreen,
   secondScreen,
-  login,
-  register,
-  forgotPassword,
-  profile,
-  editProfile,
-  changePassword;
+  login;
 
   String get route => '/${toString().replaceAll('SGRoute.', '')}';
   String get name => toString().replaceAll('SGRoute.', '');
@@ -32,16 +30,28 @@ class SGGoRouter {
     initialLocation: SGRoute.firstScreen.route,
     routes: <GoRoute>[
       GoRoute(
+        path: SGRoute.login.route,
+        builder: (BuildContext context, GoRouterState state) => LoginPage(),
+      ).fade(),
+      GoRoute(
+        path: SGRoute.login.route,
+        builder: (BuildContext context, GoRouterState state) =>
+            const FirstScreen(),
+      ).fade(),
+      GoRoute(
         path: SGRoute.firstScreen.route,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             const MaterialPage<FirstScreen>(child: FirstScreen()),
-      ),
+      ).fade(),
       GoRoute(
         path: SGRoute.secondScreen.route,
         pageBuilder: (BuildContext context, GoRouterState state) =>
             const MaterialPage<SecondScreen>(child: SecondScreen()),
-      ),
+      ).fade(),
     ],
+    errorBuilder: (BuildContext context, GoRouterState state) => NotFoundPage(
+      title: 'errorState ${state.error} - ${state.location}',
+    ),
   );
   GoRouter get getGoRouter => goRoute;
 }
