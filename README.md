@@ -1,4 +1,4 @@
-# Flutter Production Boilerplate Riverpod
+# Grog
 
 ## A flutter project containing riverpod, flutter_lints, hive, easy_translations and more!
 

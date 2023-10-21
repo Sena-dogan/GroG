@@ -18,7 +18,7 @@ class MyApp extends ConsumerWidget {
       routerConfig: getIt<SGGoRouter>().getGoRouter,
 
       /// Localization is not available for the title.
-      title: 'Flutter Production Boilerplate',
+      title: 'Grog',
 
       /// Theme stuff
       theme: FlexThemeData.light(
