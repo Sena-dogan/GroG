@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../config/router/app_router.dart';
+import '../widgets/bottom_nav_bar.dart';
 
 class FirstScreen extends ConsumerWidget {
   const FirstScreen({super.key});
@@ -11,6 +12,7 @@ class FirstScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
+      bottomNavigationBar: const NavBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

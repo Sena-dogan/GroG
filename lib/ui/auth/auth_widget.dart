@@ -6,9 +6,6 @@ import 'package:social_login_buttons/social_login_buttons.dart';
 
 import 'login_logic.dart';
 
-
-
-
 class AuthSocialWidget extends ConsumerStatefulWidget {
   const AuthSocialWidget({super.key});
 

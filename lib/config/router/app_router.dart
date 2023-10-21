@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_function_declarations_over_variables
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
@@ -34,19 +35,20 @@ class SGGoRouter {
         builder: (BuildContext context, GoRouterState state) => LoginPage(),
       ).fade(),
       GoRoute(
-        path: SGRoute.login.route,
+        path: SGRoute.home.route,
+        builder: (BuildContext context, GoRouterState state) =>
+            const FirstScreen(),
+        redirect: _authGuard,
+      ).fade(),
+      GoRoute(
+        path: SGRoute.firstScreen.route,
         builder: (BuildContext context, GoRouterState state) =>
             const FirstScreen(),
       ).fade(),
       GoRoute(
-        path: SGRoute.firstScreen.route,
-        pageBuilder: (BuildContext context, GoRouterState state) =>
-            const MaterialPage<FirstScreen>(child: FirstScreen()),
-      ).fade(),
-      GoRoute(
         path: SGRoute.secondScreen.route,
-        pageBuilder: (BuildContext context, GoRouterState state) =>
-            const MaterialPage<SecondScreen>(child: SecondScreen()),
+        builder: (BuildContext context, GoRouterState state) =>
+            const SecondScreen(),
       ).fade(),
     ],
     errorBuilder: (BuildContext context, GoRouterState state) => NotFoundPage(
@@ -58,8 +60,9 @@ class SGGoRouter {
 
 final String? Function(BuildContext context, GoRouterState state) _authGuard =
     (BuildContext context, GoRouterState state) {
-  if (!(getStoreHelper.getToken() != null)) {
-    return SGRoute.login.route;
+  if (FirebaseAuth.instance.currentUser == null) {
+    debugPrint('SGGoRouter: AuthGuard: No user found, redirecting to login');
+    return SGRoute.home.route; //SGRoute.login.route;
   }
-  return null;
+  return SGRoute.home.route;
 };
