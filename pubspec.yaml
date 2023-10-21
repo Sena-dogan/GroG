@@ -34,7 +34,7 @@ dependencies:
   flutter_displaymode: ^0.6.0
   easy_localization: ^3.0.1
   ionicons: ^0.2.2
-  firebase_core: ^2.15.0
+  firebase_core: ^2.19.0
   slide_switcher: ^1.1.2  
   cupertino_icons: ^1.0.2
   flutter_riverpod: ^2.3.6
@@ -70,6 +70,10 @@ dependencies:
   flutter_swipe_action_cell: ^3.1.2
   stack_trace: ^1.11.0
   flutter_native_splash: ^2.3.4
+  google_sign_in: ^6.1.5
+  sign_in_with_apple: ^5.0.0
+  firebase_auth: ^4.11.1
+  social_login_buttons: ^1.0.7
 
 
 dev_dependencies:
