@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 import '../utils/assets.dart';
+import '../utils/colors.dart';
 import 'auth_widget.dart';
 
 class LoginPage extends ConsumerWidget {
@@ -14,7 +16,7 @@ class LoginPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: GrogColors.ScaffoldBackGroundColor,
       key: scaffoldKey,
       body: Column(
         children: <Widget>[
@@ -23,9 +25,14 @@ class LoginPage extends ConsumerWidget {
             Assets.appLogo,
           ),
           Gap(size.height * 0.05),
-          Image.asset(
-            Assets.loginImage,
-            fit: BoxFit.contain,
+          GestureDetector(
+            child: Image.asset(
+              Assets.loginImage,
+              fit: BoxFit.contain,
+            ),
+            onTap: () {
+              context.go('/intro');
+            },
           ),
           Expanded(
             child: Container(
