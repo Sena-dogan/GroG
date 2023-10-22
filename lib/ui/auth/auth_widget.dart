@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 
-import 'login_logic.dart';
+import '../../logic/login_logic.dart';
+
 
 class AuthSocialWidget extends ConsumerStatefulWidget {
   const AuthSocialWidget({super.key});
