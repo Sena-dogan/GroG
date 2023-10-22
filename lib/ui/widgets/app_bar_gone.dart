@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AppBarGone extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarGone({super.key});
+class EmptyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const EmptyAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class AppBarGone extends StatelessWidget implements PreferredSizeWidget {
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: brightness,
         systemStatusBarContrastEnforced: false,
-        statusBarColor: Theme.of(context).colorScheme.background,
+        statusBarColor: Colors.transparent,
         statusBarIconBrightness:
             brightness == Brightness.dark ? Brightness.light : Brightness.dark,
       ),
