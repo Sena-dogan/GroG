@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'config/router/app_router.dart';
-import 'config/theme/theme_logic.dart';
-import 'config/theme/theme_ui_model.dart';
 import 'di/components/service_locator.dart';
 
 class MyApp extends ConsumerWidget {
@@ -13,7 +11,7 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ThemeUiModel currentTheme = ref.watch(themeLogicProvider);
+    //final ThemeUiModel currentTheme = ref.watch(themeLogicProvider);
     return MaterialApp.router(
       routerConfig: getIt<SGGoRouter>().getGoRouter,
 
@@ -29,7 +27,7 @@ class MyApp extends ConsumerWidget {
         scheme: FlexScheme.hippieBlue,
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
       ),
-      themeMode: currentTheme.themeMode,
+      themeMode: ThemeMode.dark, // geçici olarak dark mode sabitlendi.
       debugShowCheckedModeBanner: false,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,

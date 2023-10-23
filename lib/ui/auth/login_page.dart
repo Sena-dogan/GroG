@@ -29,6 +29,7 @@ class LoginPage extends ConsumerWidget {
             child: Image.asset(
               Assets.loginImage,
               fit: BoxFit.contain,
+              height: 512,
             ),
             onTap: () {
               context.go('/intro');

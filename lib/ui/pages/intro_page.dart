@@ -47,6 +47,7 @@ class IntroTexts extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 34,
                 fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
             ),
           ),
@@ -77,6 +78,7 @@ class IntroTexts extends StatelessWidget {
               style: GoogleFonts.raleway(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
             ),
           ),
