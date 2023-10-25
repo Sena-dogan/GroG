@@ -4,4 +4,5 @@ class Assets {
   static const String appLogo = 'assets/images/applogo.svg';
   static const String appCompany = 'assets/images/company.svg';
   static const String loginImage = 'assets/images/login_image.png';
+  static const String homeImage = 'assets/images/homeimage.png';
 }
