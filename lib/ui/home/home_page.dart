@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 
 import '../utils/assets.dart';
 import '../utils/colors.dart';
+import 'widgets/search_widget.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -29,7 +30,7 @@ class HomePage extends ConsumerWidget {
           backgroundColor: Colors.transparent,
           toolbarHeight: size.height * 0.08,
           title: Align(
-            alignment: Alignment.centerRight,
+            alignment: Alignment.topRight,
             child: Padding(
               padding: EdgeInsets.only(bottom: size.height * 0.03),
               child: SvgPicture.asset(
@@ -45,7 +46,15 @@ class HomePage extends ConsumerWidget {
               Image.asset(
                 Assets.homeImage,
               ),
-              const Gap(20),
+              const Gap(30),
+              // search bar
+              Padding(
+                padding: EdgeInsets.only(right: size.width * 0.04),
+                child: const Align(
+                  alignment: Alignment.centerRight,
+                  child: SearchWidget(),
+                ),
+              ),
             ],
           ),
         ),
