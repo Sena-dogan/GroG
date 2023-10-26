@@ -27,14 +27,13 @@ class HomePage extends ConsumerWidget {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          toolbarHeight: size.height * 0.1,
+          toolbarHeight: size.height * 0.08,
           title: Align(
             alignment: Alignment.centerRight,
             child: Padding(
               padding: EdgeInsets.only(bottom: size.height * 0.03),
               child: SvgPicture.asset(
-                Assets.appLogo,
-                height: size.height * 0.07,
+                Assets.appLogoSmall,
               ),
             ),
           ),
@@ -46,6 +45,7 @@ class HomePage extends ConsumerWidget {
               Image.asset(
                 Assets.homeImage,
               ),
+              const Gap(20),
             ],
           ),
         ),
