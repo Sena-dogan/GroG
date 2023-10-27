@@ -19,17 +19,16 @@ class LoginResponse with _$LoginResponse {
 
 @freezed
 class UserModel extends HiveObject with _$UserModel {
-  UserModel._();
 
-  @HiveType(typeId: 0, adapterName: "UserModelAdapter")
+  @HiveType(typeId: 0, adapterName: 'UserModelAdapter')
   factory UserModel({
-    @JsonKey(name: '_id')
-    @HiveField(0) required String id,
+    @JsonKey(name: '_id') @HiveField(0) required String id,
     @HiveField(1) required String name,
     @HiveField(2) required String email,
     @HiveField(3) required String role,
     @HiveField(4) required bool verified,
   }) = _UserModel;
+  UserModel._();
 
   factory UserModel.fromJson(Map<String, Object?> json) =>
       _$UserModelFromJson(json);
