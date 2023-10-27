@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../utils/assets.dart';
 import '../utils/colors.dart';
 import 'widgets/category_widget.dart';
 import 'widgets/search_widget.dart';
+import 'widgets/title_widget.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -56,19 +56,8 @@ class HomePage extends ConsumerWidget {
                 ),
               ),
               const Gap(33),
-              Padding(
-                padding: const EdgeInsets.only(left: 21),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Categories',
-                    style: GoogleFonts.notoSerifDisplay(
-                      color: Colors.white,
-                      fontSize: 23,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
+              const TitleWidget(
+                title: 'Categories',
               ),
               const Gap(25),
               CategoryWidget(
@@ -110,6 +99,10 @@ class HomePage extends ConsumerWidget {
                     image: Assets.homeCatMocktail,
                   ),
                 ],
+              ),
+              const Gap(62),
+              const TitleWidget(
+                title: 'Alcohols',
               ),
             ],
           ),
