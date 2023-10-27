@@ -12,4 +12,10 @@ class Assets {
   static const String homeIconCocktail = 'assets/images/icon_cocktail.png';
   static const String homeIconMocktail = 'assets/images/icon_mocktail.png';
   static const String homeIconSurpriseMe = 'assets/images/icon_surprise_me.png';
+  static const String rum = 'assets/images/rum.png';
+  static const String whiskey = 'assets/images/whiskey.png';
+  static const String vodka = 'assets/images/vodka.png';
+  static const String gin = 'assets/images/gin.png';
+  static const String tequila = 'assets/images/tequila.png';
+  static const String brandy = 'assets/images/brandy.png';
 }
