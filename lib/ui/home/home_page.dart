@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import '../utils/assets.dart';
 import '../utils/colors.dart';
+import 'widgets/alcohol_category.dart';
 import 'widgets/category_widget.dart';
 import 'widgets/search_widget.dart';
 import 'widgets/title_widget.dart';
@@ -104,6 +105,51 @@ class HomePage extends ConsumerWidget {
               const TitleWidget(
                 title: 'Alcohols',
               ),
+              const Gap(25),
+              Padding(
+                padding: EdgeInsets.all(size.width * 0.05),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        const AlcoholCategory(
+                          image: Assets.rum,
+                          alcoholName: 'RUM',
+                        ),
+                        Gap(size.width * 0.05),
+                        const AlcoholCategory(
+                          image: Assets.whiskey,
+                          alcoholName: 'WHISKEY',
+                        ),
+                        Gap(size.width * 0.05),
+                        const AlcoholCategory(
+                          image: Assets.tequila,
+                          alcoholName: 'TEQUILA',
+                        ),
+                      ],
+                    ),
+                    const Gap(41),
+                    Row(
+                      children: <Widget>[
+                        const AlcoholCategory(
+                          image: Assets.gin,
+                          alcoholName: 'GIN',
+                        ),
+                        Gap(size.width * 0.05),
+                        const AlcoholCategory(
+                          image: Assets.vodka,
+                          alcoholName: 'VODKA',
+                        ),
+                        Gap(size.width * 0.05),
+                        const AlcoholCategory(
+                          image: Assets.brandy,
+                          alcoholName: 'BRANDY',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
